@@ -2,7 +2,7 @@ package com.company;
 
 public class News {
     int newsId;
-    String postedByUser,commentByUser,comment;
+    String postedByUser, commentByUser, comment;
 
     public int getNewsId() {
         return newsId;

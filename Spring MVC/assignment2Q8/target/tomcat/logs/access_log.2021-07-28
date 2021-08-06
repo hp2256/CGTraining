@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:31:14 +0530] "GET /login HTTP/1.1" 404 949 http-bio-8080-exec-1 93
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:31:22 +0530] "GET /login HTTP/1.1" 404 949 http-bio-8080-exec-2 5
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:31:25 +0530] "GET / HTTP/1.1" 404 949 http-bio-8080-exec-3 4
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:31:29 +0530] "GET /login HTTP/1.1" 404 949 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:32:29 +0530] "GET /login HTTP/1.1" 404 949 http-bio-8080-exec-1 99
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:33:06 +0530] "GET /login HTTP/1.1" 200 1271 http-bio-8080-exec-1 740
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:33:09 +0530] "GET /login?language=fr HTTP/1.1" 200 1287 http-bio-8080-exec-2 16
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:33:11 +0530] "GET /login?language=vi HTTP/1.1" 200 1293 http-bio-8080-exec-3 13
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:33:39 +0530] "GET /login?language=vi HTTP/1.1" 200 932 http-bio-8080-exec-4 183
+0:0:0:0:0:0:0:1 - - [28/Jul/2021:19:33:41 +0530] "GET /login?language=en HTTP/1.1" 200 910 http-bio-8080-exec-5 12

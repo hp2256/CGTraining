@@ -22,14 +22,14 @@ public class Main {
         newsList.add(new News(1, "HP", "ABC", "hi hello"));
 
         //question 4
-        Map<Integer,Long> idCount =
+        Map<Integer, Long> idCount =
                 newsList.stream()
-                .collect(Collectors.groupingBy(News::getNewsId,Collectors.counting()));
+                        .collect(Collectors.groupingBy(News::getNewsId, Collectors.counting()));
 
-        System.out.println("new id with max comments: "+
+        System.out.println("new id with max comments: " +
                 idCount.entrySet().stream()
 
-                        .max((id1,id2)-> (int) (id1.getValue()-id1.getValue())).get().getKey());
+                        .max((id1, id2) -> (int) (id1.getValue() - id1.getValue())).get().getKey());
 
 
         //question 5
@@ -43,20 +43,19 @@ public class Main {
         System.out.println("\nQuestion 6");
         Map<String, Long> userCount =
                 newsList.stream()
-                .collect(Collectors.groupingBy(News::getCommentByUser,Collectors.counting()));
+                        .collect(Collectors.groupingBy(News::getCommentByUser, Collectors.counting()));
 
 
-
-        System.out.println("User "+userCount.entrySet()
+        System.out.println("User " + userCount.entrySet()
                 .stream()
-                .max((a1,a2)-> (int) (a1.getValue()-a2.getValue()))
-                .get().getKey()+" has most comments");
+                .max((a1, a2) -> (int) (a1.getValue() - a2.getValue()))
+                .get().getKey() + " has most comments");
 
         //question 7
         System.out.println("\nQuestion 7");
 
-        for (Map.Entry<String,Long> user: userCount.entrySet()){
-            System.out.println("User "+ user.getKey()+ " Number of comments: "+ user.getValue());
+        for (Map.Entry<String, Long> user : userCount.entrySet()) {
+            System.out.println("User " + user.getKey() + " Number of comments: " + user.getValue());
         }
 
     }

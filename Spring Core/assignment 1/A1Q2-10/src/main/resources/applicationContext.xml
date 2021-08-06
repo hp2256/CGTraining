@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.hp.springbasics"/>
+    <bean id="setanswers" class="com.assignments.A1Q2.case2.QuestionCase2">
+        <property name="questionId" value="1"/>
+        <property name="question" value="What are some cities in India?"/>
+        <property name="setanswers">
+            <set>
+                <value>Mumbai</value>
+                <value>BLR</value>
+                <value>Chennai</value>
+                <value>Kerala</value>
+                <value>Delhi</value>
+
+            </set>
+        </property>
+
+    </bean>
+    <bean id="listanswer" class="com.assignments.A1Q2.case1.QuestionCase1">
+        <property name="questionId" value="1"/>
+        <property name="question" value="What are some cities in India?"/>
+        <property name="listanswers">
+            <list>
+                <value>Mumbai</value>
+                <value>BLR</value>
+                <value>Chennai</value>
+                <value>Kerala</value>
+                <value>Delhi</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="mapanswers" class="com.assignments.A1Q2.case3.QuestionCase3">
+        <property name="questionId" value="1"/>
+        <property name="question" value="What are some cities in India?"/>
+        <property name="mapanswers">
+            <map>
+                <entry key="1" value="Mumbai"></entry>
+                <entry key="2" value="BLR"></entry>
+                <entry key="3" value="Chennai"></entry>
+                <entry key="4" value="Kerala"></entry>
+                <entry key="5" value="Delhi"></entry>
+            </map>
+        </property>
+
+    </bean>
+
+    <bean id="bankAccountController" class="com.assignments.A1Q3.BankAccountController" autowire="byName">
+
+    </bean>
+    <bean id="bankAccountServiceImpl" class="com.assignments.A1Q3.BankAccountServiceImpl" autowire="constructor">
+
+    </bean>
+    <bean id="bankAccountRepositoryImpl" class="com.assignments.A1Q3.BankAccountRepositoryImpl" autowire="byType">
+
+    </bean>
+    <bean id="bankAccount" class="com.assignments.A1Q3.BankAccount" autowire="constructor">
+        <constructor-arg name="accountId" value="12345"/>
+        <constructor-arg name="accountHolderName" value="hp"/>
+        <constructor-arg name="accountType" value="Savings"/>
+        <constructor-arg name="accountBalance" value="10000"/>
+    </bean>
+
+    <bean id="company1" class="com.assignments.A1Q5.Company">
+        <property name="name" value="Test Pvt. Ltd."/>
+        <property name="location" value="India"/>
+    </bean>
+    <bean id="employee" class="com.assignments.A1Q5.Employee">
+        <property name="id" value="123456"/>
+        <property name="name" value="Charlotte O' Neil"/>
+    </bean>
+    <bean id="customerService" class="com.assignments.A1Q8.CustomerService">
+        <property name="message" value="Property msg"/>
+    </bean>
+
+    <bean id="lifeCycle" class="com.assignments.A1Q9.HelloWorld" init-method="init" destroy-method="destroy"></bean>
+</beans>
